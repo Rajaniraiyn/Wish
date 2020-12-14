@@ -1,2 +1,2 @@
-<h1># DiwaliWish</h1>
-<h2>New way to wish your close ones in this Diwali by Rajaniraiyn. Wish you all.</h2>
+# Wish with ❤
+## New way to wish your close ones with your favourite gifs and quotes. Wish all with ❤ by Rajaniraiyn.</h2>
