@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Generator | Wishes with ❤ by Rajaniraiyn.</title>
+    <meta content='New way to wish your close ones with your favourite gifs and quotes. Wish all with ❤ by Rajaniraiyn.' name=description>
+    <meta content="index, follow" name=robots>
+    <meta content=Rajaniraiyn name=author>
+    <meta property=og:title content='Generator | Wishes with ❤ by Rajaniraiyn.'>
+    <meta property=og:url content=https://rajaniraiyn.github.io/Wish>
+    <meta property=og:description content='New way to wish your close ones with your favourite gifs and quotes. Wish all with ❤ by Rajaniraiyn.'>
+    <meta property=og:image content=''>
+    <meta property=og:type content=website>
+    <meta property=og:image:type content=image/gif>
+    <meta property=og:image:width content=300>
+    <meta property=og:image:height content=300>
+    <meta content="width=device-width, initial-scale=1.0" name=viewport>
+  </head>
+  <body>
+    <label for=i1>Your name: 
+    </label>
+    <br>
+    <input type=text id=i1>
+    <br>
+    <label for=i2>Your Wish: 
+    </label>
+    <br>
+    <input type=text id=i2>
+    <br>
+    <label for=i3>Your gif URL: 
+    </label>
+    <br>
+    <input type=url id=i3>
+    <br>
+    <br>
+    <button onclick=get()>Get URL 
+    </button>
+    <div id=oc style=display:none!important>
+      <label for=o>Copy your URL and Share to your loved ones: 
+      </label>
+      <br>
+      <input type=url id=o value style=width:100%;border:0;padding:10px;font-size:15px;border-radius:5px>
+    </div>
+    <script>function get(){var j=btoa(document.getElementById("i1").value),k=btoa(document.getElementById("i2").value),h=btoa(document.getElementById("i3").value);var i="https://rajaniraiyn.github.io/Wish/?a="+j+"&b="+k+"&c="+h;document.getElementById("o").value=i;document.getElementById("oc").style="display:block!important;"};</script>
+  </body>
+</html>
