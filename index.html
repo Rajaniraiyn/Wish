@@ -1,28 +1,32 @@
 <!DOCTYPE html>
-<html lang=en charset=UTF-8>
+<html lang="en" charset="UTF-8">
   <head>
-    <meta content name=description>
-    <script>var p=new URLSearchParams(window.location.search),a=atob(p.get("a")),b=atob(p.get("b")),c=atob(p.get("c"));if(a+1 != 'ée'){document.title="Wishes with ❤ from "+a;document.getElementsByTagName("meta")[0].content=b;}</script>
+    <title>Generator | Wishes with ❤ by Rajaniraiyn</title>
+    <meta content="New way to wish your close ones with your favourite images and gifs and quotes. Wish all with ❤ by Rajaniraiyn." name=description>
     <meta content="index, follow" name=robots>
     <meta content=Rajaniraiyn name=author>
-    <meta property=og:title content>
-    <meta property=og:url content=https://rajaniraiyn.github.io/Wish>
-    <meta property=og:description content>
-    <meta property=og:image content>
-    <meta property=og:type content=website>
-    <meta property=og:image:type content=image/gif>
-    <meta property=og:image:width content=300>
-    <meta property=og:image:height content=300>
+    <meta property=og:title content="Generator | Wishes with ❤ by Rajaniraiyn.">
+    <meta property=og:url content=https://rajaniraiyn.github.io/Wish/Input>
+    <meta property=og:description content="New way to wish your close ones with your favourite gifs and quotes. Wish all with ❤ by Rajaniraiyn.">
     <meta content="width=device-width, initial-scale=1.0" name=viewport>
-    <script>if(a+1 != 'ée'){document.getElementsByTagName("meta")[3].content="Wishes with ❤"+a;document.getElementsByTagName("meta")[5].content=b;document.getElementsByTagName("meta")[6].content=c;}</script>
-  </head>
+    <noscript>Your browser does not support JavaScript! You need it to use our services.</noscript>
+</head>
   <body>
-    <link itemprop=thumbnailUrl href>
-    <span itemprop=thumbnail itemscope itemtype=http://schema.org/ImageObject><link itemprop=url href></span>
-    <h1 style=text-align:center;color:white;font-weight:bold;background:#000000d1;border-radius:20px;padding:2%;max-width:fit-content;margin-left:auto;margin-right:auto id=b></h1>
-    <script>if(a+1 != 'ée'){document.body.style="background: url("+c+") no-repeat center center fixed, -webkit-gradient(linear,left top,right bottom,from(#4d54d1),color-stop(50%,#a51c7b),to(#ee4a37)) no-repeat center center fixed;background-position: center;background-repeat: no-repeat;background-size: cover;background-color: transparent;";document.body.getElementsByTagName("link")[0].href=c;document.body.getElementsByTagName("link")[1].href=c;document.getElementById("b").innerHTML=b;}</script>
-    <div style=position:absolute;bottom:0;padding-bottom:5%;font-family:system-ui;color:white>
-      <h3 style=background:#000000d1;padding:10px;border-radius:10px;text-align:center>Created By:- Akil Kumar alias Rajaniraiyn</h3>
+    <label for=i1>Your name:</label><br>
+    <input type=text id=i1><br>
+    <label for=i2>Your Wish:</label><br>
+    <input type=text id=i2><br>
+    <label for=i3>Your image or gif URL:</label><br>
+    <input type=url id=i3><br>
+    <button onclick=get()>Get URL</button><br>
+    <div id=oc style=display:block!important>
+        <label for=o>Copy your URL and Share to your loved ones:</label><br>
+        <input type=url id=o value style="width:100%;border:0;padding:10px;font-size:15px;margin:5px 0 5px 0;border-radius:5px" readonly=readonly><br>
+        <button onclick=copy()>Copy URL</button>
     </div>
+    <script>
+      function get(){var e=btoa(document.getElementById("i1").value),d=btoa(document.getElementById("i2").value),f=btoa(document.getElementById("i3").value);e="https://rajaniraiyn.github.io/Wish/?a="+e+"&b="+d+"&c="+f;document.getElementById("o").value=e;document.getElementById("oc").style="display:block!important;"}
+      function copy(){var b=document.getElementById("o");b.select();b.setSelectionRange(0,99999);document.execCommand("copy");alert("Link copied")};
+    </script>
   </body>
 </html>
