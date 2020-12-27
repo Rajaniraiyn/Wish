@@ -25,8 +25,8 @@
         <button onclick=copy()>Copy URL</button>
     </div>
     <script>
-      function urlId(a){if(a.includes("giphy.gif")){var b=a.split("/");b=b[b.length-2]}else a.includes("html5")?(b=a.split("/"),b=b[b.length-2]):a.includes("-")?(b=a.split("/"),b=b[b.length-2],b=b.split("-"),b=b[b.length-1]):a.includes("-")?(b=a.split("-"),b=b[b.length-1]):a.includes("embed")&&(b=a.split("/"),b=b[b.length-1]);return b};    
-      function get(){var e=btoa(document.getElementById("i1").value),d=btoa(document.getElementById("i2").value),f=btoa(urlId(document.getElementById("i3").value));e="https://rajaniraiyn.github.io/Wish/?a="+e+"&b="+d+"&c="+f;document.getElementById("o").value=e;document.getElementById("oc").style="display:block!important;"}
+      function urlId(f){var e,h=f.split("/"),g=h[h.length-2];return f.includes("giphy.gif")?e=g:f.includes("-")?e=g.split("-")[g.split("-").length-1]:f.includes("-")?e=f.split("-")[f.split("-").length-1]:f.includes("embed")?e=h[h.length-1]:alert("Please use another type of Giphy URL"),e}
+      function get(){var e=btoa(document.getElementById("i1").value),d=btoa(document.getElementById("i2").value),f=btoa(urlId(document.getElementById("i3").value));""==d&&alert("Please type your wish. It may be message, greetings and whatever you want");e="https://rajaniraiyn.github.io/Wish/?a="+e+"&b="+d+"&c="+f;document.getElementById("o").value=e;document.getElementById("oc").style="display:block!important;"}
       function copy(){var b=document.getElementById("o");b.select();b.setSelectionRange(0,99999);document.execCommand("copy");alert("Link copied")};
     </script>
   </body>
