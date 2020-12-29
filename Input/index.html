@@ -4,7 +4,7 @@
     <title>Generator | Wishes with ❤ by Rajaniraiyn</title>
     <meta content="New way to wish your close ones with your favourite images, gifs and quotes. Wish all with ❤ by Rajaniraiyn." name="description">
     <meta content="Rajaniraiyn" name="author">
-    <link rel="icon" href="https://rajaniraiyn.github.io/Wish/res/icon.png"  type="image/png">
+    <link rel="icon" href="https://rajaniraiyn.github.io/Wish/res/icon.png" type="image/png">
     <meta property="og:title" content="Generator | Wishes with ❤ by Rajaniraiyn">
     <meta property="og:url" content="https://rajaniraiyn.github.io/Wish/Input/">
     <meta property="og:description" content="New way to wish your close ones with your favourite gifs, images and quotes. Wish all with ❤ by Rajaniraiyn.">
@@ -31,34 +31,43 @@
     <meta name="og:site_name" content="Generator | Wishes with ❤ by Rajaniraiyn">
     <meta name="og:locale" content="en_IN">
     <noscript>Your browser does not support JavaScript! You need it to use our services.</noscript>
-    <style>input{border-radius:10px;text-align:center;border-bottom:0;background:#c1c1c1;margin-left:auto;margin-right:auto;min-height:30px;border-width:0;width:300px;outline:0;font-family:Arial,Helvetica,Sans-Serif;transition-duration:1s;font-size:x-large}input[placeholder]{font-size:small}input:focus{background:#0ff}</style>
+    <style>button,input{border-radius:10px;text-align:center;border-bottom:0;background:#c1c1c1;margin-left:auto;margin-right:auto;min-height:30px;border-width:0;width:300px;outline:0;font-family:Arial,Helvetica,Sans-Serif;transition-duration:1s;font-size:x-large}input[placeholder]{font-size:small}input:focus{background:#0ff}</style>
+    <script>
+      function wish(){document.getElementById("giphy").style="display:none;"}
+      function giphy(){document.getElementById("giphy").style="display:block;"};
+    </script>
   </head>
-  <body style="font-weight: 600;font-family: Arial,Helvetica,sans-serif;">
-    <img src="https://rajaniraiyn.github.io/Wish/res/wish%20logo.png" style="margin-left: 25%;width: 50%;"><br>
+  <body style="font-weight:600;font-family:Arial,Helvetica,sans-serif">
+    <img src="https://rajaniraiyn.github.io/Wish/res/wish%20logo.png" style="margin-left:25%;width:50%">
+    <div id="giphy" style="display:none">
+      <iframe src="https://giphy.com/" style="position:absolute;width:100vw;height:100vh;top:0;left:0;margin:0;outline:0;border-width:0" sandbox="allow-scripts"></iframe>
+      <button onclick="wish()" style="border-radius:500px;position:absolute;padding:10px;font:inherit;top:0;right:0;border-width:0;background:cyan">Back</button>
+    </div><br>
     <hr><br>
-    <div style="text-align: center;">
+    <div style="text-align:center">
       <label for="i1">Your name:</label><br>
       <input type="text" id="i1" placeholder="Not so important"><br>
       <br>
-      <label for="i2">Your Wish:</label>
-      <br>
-      <input type="text" id="i2" placeholder="This may be your greeting, message, wish,..."><br>
-      <br>
-      <label for="i3">Your image or gif URL:</label>
-      <br>
-      <input type="url" id="i3" placeholder="Go to giphy.com get a link and paste it here"><br>
+      <label for="i2">Your Wish:</label><br>
+      <input type="text" id="i2" placeholder="This may be your greeting, message, wish,..."><br><br>
+      <label for="i3">Your image or gif URL:
+        <button style="margin:5px;border-radius:100px;padding:5px;max-width:fit-content;font-size:initial" onclick="giphy()">Get Links</button>
+      </label><br>
+      <input type="url" id="i3" placeholder="Go to giphy.com or click the button then get link and paste it here" style="font-size:60%"><br>
       <br>
       <button onclick="get()">Get URL</button><br>
     </div>
-    <div id="oc" style="display:none;"><hr><br>
+    <div id="oc" style="display:block!important;text-align:center">
+      <hr><br>
       <label for="o">Copy your URL and Share to your loved ones:</label><br>
-      <input type="url" id="o" style="width:100%;border:0;padding:10px;font-size:15px;cursor:pointer;margin:5px 0 5px 0;border-radius:5px;min-height:fit-content;" readonly="readonly" onclick="copy()"><br>
+      <input type="url" id="o" style="width:100%;border:0;padding:10px;font-size:10px;cursor:pointer;margin:5px 0 5px 0;border-radius:5px;min-height:fit-content" readonly="readonly" onclick="copy()"><br>
       <button onclick="copy()">Copy URL</button>
-    </div><br><hr>
+    </div><br>
+    <hr>
     <script>
-      function urlId(f){var e,h=f.split("/"),g=h[h.length-2];return f.includes("giphy.gif")?e=g:f.includes("-")?e=g.split("-")[g.split("-").length-1]:f.includes("-")?e=f.split("-")[f.split("-").length-1]:f.includes("embed")?e=h[h.length-1]:f.includes("giphy")?alert("Please use another type of Giphy URL. You can also use image or any URLs"):f.includes('.')?e=f:alert('Please use valid URL'),e}
-      function get(){var e=btoa(document.getElementById("i1").value),d=btoa(document.getElementById("i2").value);if(""==d){alert("Please type your wish. It may be message, greetings and whatever you want.");return};var f=btoa(urlId(document.getElementById("i3").value));e="https://rajaniraiyn.github.io/Wish/?a="+e+"&b="+d+"&c="+f;document.getElementById("o").value=e;document.getElementById("oc").style="display:block!important;"}
-      function copy(){var b=document.getElementById("o");b.select();b.setSelectionRange(0,99999);document.execCommand("copy");alert("Link copied")};
+      function urlId(a){var c,b=a.split("/"),d=b[b.length-2];return a.includes("giphy.gif")?c=d:a.includes("-")?c=d.split("-")[d.split("-").length-1]:a.includes("-")?c=a.split("-")[a.split("-").length-1]:a.includes("embed")?c=b[b.length-1]:a.includes("giphy")?alert("Please use another type of Giphy URL. You can also use image or any URLs"):a.includes(".")?c=a:alert("Please use valid URL"),c}
+      function get(){var a=btoa(document.getElementById("i1").value),c=btoa(document.getElementById("i2").value);if(""==c)alert("Please type your wish. It may be message, greetings and whatever you want.");else{var b=btoa(urlId(document.getElementById("i3").value));a="https://rajaniraiyn.github.io/Wish/?a="+a+"&b="+c+"&c="+b;document.getElementById("o").value=a;document.getElementById("oc").style="display:block!important;"}}
+      function copy(){var a=document.getElementById("o");a.select();a.setSelectionRange(0,99999);document.execCommand("copy");alert("Link copied")};
     </script>
-</body>
+  </body>
 </html>
