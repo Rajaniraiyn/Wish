@@ -63,6 +63,24 @@
   </div>
   </body>
   <script>
-  document.documentElement.requestFullscreen();
-  </script>
+  function fullScreen(){
+    var a=document.documentElement;
+    if(a.requestFullscreen){
+      a.requestFullscreen()}
+    else{
+      if(a.msRequestFullscreen){
+        a=document.body;
+        a.msRequestFullscreen()}
+      else{
+        if(a.mozRequestFullScreen){
+          a.mozRequestFullScreen()}
+        else{
+          if(a.webkitRequestFullScreen){
+            a.webkitRequestFullScreen()}
+        }
+      }
+    }
+  }
+  document.documentElement.onload=fullScreen();
+</script>
 </html>
