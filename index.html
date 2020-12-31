@@ -63,24 +63,38 @@
   </div>
   </body>
   <script>
-  function fullScreen(){
-    var a=document.documentElement;
-    if(a.requestFullscreen){
-      a.requestFullscreen()}
-    else{
-      if(a.msRequestFullscreen){
-        a=document.body;
-        a.msRequestFullscreen()}
-      else{
-        if(a.mozRequestFullScreen){
-          a.mozRequestFullScreen()}
-        else{
-          if(a.webkitRequestFullScreen){
-            a.webkitRequestFullScreen()}
+function fullScreen(b) {
+  if (b == "" || b == '0' || b == null) {
+    var c = document.documentElement
+  } else {
+    if (b[0] == "#") {
+      var c = document.getElementById(b.replace("#", ""))
+    }  else {
+        alert("Error occur while oppening Fullscreen")
+        return;
+      }
+  }
+  c.onload = f(c);
+}
+
+function f(b) {
+  if (b.requestFullscreen) {
+    b.requestFullscreen()
+  } else {
+    if (b.msRequestFullscreen) {
+      b = document.body;
+      b.msRequestFullscreen()
+    } else {
+      if (b.mozRequestFullScreen) {
+        b.mozRequestFullScreen()
+      } else {
+        if (b.webkitRequestFullScreen) {
+          b.webkitRequestFullScreen()
         }
       }
     }
   }
-  document.documentElement.onload=fullScreen();
+}
+    fullScreen()
 </script>
 </html>
