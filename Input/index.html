@@ -80,53 +80,45 @@
     </h1>
     <hr>
     <div id=oc style=display:none>
-      <button style="position:relative;margin:0;margin-bottom:5px;margin-left:300px;font-size:initial;box-shadow:black 1px 1px 20px 3px;padding-top:initial;color:red;width:fit-content;min-height:1px;font-weight:bolder" onclick="document.getElementById('oc').style='display:none;'">x
-      </button>
+      <button style="position:relative;margin:0;margin-bottom:5px;margin-left:300px;font-size:initial;box-shadow:black 1px 1px 20px 3px;padding-top:initial;color:red;width:fit-content;min-height:1px;font-weight:bolder" onclick="document.getElementById('oc').style='display:none;'">x</button>
       <br>
-      <label for=o>Copy your URL and Share to your loved ones:
-      </label>
+      <label for=o>Copy your URL and Share to your loved ones:</label>
       <br>
       <input type=url id=o style="border:0;padding:10px;font-size:10px;margin:10px 0 10px 0;min-height:fit-content" readonly=readonly onclick=copy()>
       <br>
-      <button onclick=copy() style=width:fit-content;font-size:inherit>Copy URL
-      </button>
+      <button onclick=copy() style=width:fit-content;font-size:inherit>Copy URL</button>
       <hr>
     </div>
     <img src=https://rajaniraiyn.github.io/Wish/res/icon.png style=width:100px;position:absolute;top:0;left:0>
     <div id=giphy style=display:none>
-      <iframe src=https://giphy.com/ sandbox=allow-scripts style=position:absolute;width:100vw;height:100vh;top:0;left:0;margin:0;outline:0;border-width:0>
-      </iframe>
-      <button onclick=wish() style="border-radius:500px;position:absolute;padding:10px;font:inherit;top:0;transition-duration:5s;right:0;border-width:0;height:50px;background:cyan;width:fit-content;box-shadow:cyan 0 0 20px 4px">Get
-        Back
+      <iframe src="https://giphy.com"  style=position:absolute;width:100vw;height:100vh;top:0;left:0;margin:0;outline:0;border-width:0></iframe>
+      <button onclick=wish() style="border-radius:500px;position:absolute;padding:10px;font:inherit;top:0;transition-duration:5s;right:0;border-width:0;height:50px;background:cyan;width:fit-content;box-shadow:cyan 0 0 20px 4px">Get Back
       </button>
     </div>
     <div style=text-align:center>
-      <label for=i1>Your name:
-      </label>
+      <label for=i1>Your name:</label>
       <br>
       <input type=text id=i1 placeholder="Not so important">
       <br>
       <br>
-      <label for=i2>Your Wish:
-      </label>
+      <label for=i2>Your Wish:</label>
       <br>
       <input type=text id=i2 placeholder="This may be your greeting, message, wish,...">
       <br>
       <br>
       <label for=i3>Your image or gif URL:
-        <button style=margin:5px;border-radius:100px;padding:5px;max-width:fit-content;font-size:initial onclick=giphy()>Get Links
-        </button>
+        <button style=margin:5px;border-radius:100px;padding:5px;max-width:fit-content;font-size:initial onclick=giphy()>Get Links</button>
       </label>
       <br>
       <input type=url id=i3 placeholder="Go to giphy.com or click the button then get link and paste it here" style=font-size:60%>
       <br>
       <br>
-      <button onclick=get() style=width:fit-content;font-size:inherit>Get URL
-      </button>
+      <button onclick=get() style=width:fit-content;font-size:inherit>Get URL</button>
     </div>
     <br>
     <hr>
-    <script>function urlId(c){
+    <script>
+      function urlId(c){
         if(c.includes("giphy.gif"||"html5"||"source.mov"||"giphy.mp4"||"giphy-downsized.gif")){
           var b=c.split("/"),b=b[4]}
         else{
