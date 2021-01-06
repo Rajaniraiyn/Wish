@@ -63,38 +63,29 @@
   </div>
   </body>
   <script>
-function fullScreen(b) {
-  if (b == "" || b == '0' || b == null) {
-    var c = document.documentElement
-  } else {
-    if (b[0] == "#") {
-      var c = document.getElementById(b.replace("#", ""))
-    }  else {
-        alert("Error occur while oppening Fullscreen")
-        return;
-      }
-  }
-  c.onload = f(c);
-}
-
-function f(b) {
-  if (b.requestFullscreen) {
-    b.requestFullscreen()
-  } else {
-    if (b.msRequestFullscreen) {
-      b = document.body;
-      b.msRequestFullscreen()
-    } else {
-      if (b.mozRequestFullScreen) {
-        b.mozRequestFullScreen()
-      } else {
-        if (b.webkitRequestFullScreen) {
-          b.webkitRequestFullScreen()
-        }
+  function fullScreen(a){
+    if(a==""||a=="0"||a==null){
+      var d=document.documentElement}
+    else{
+      if(a[0]=="#"){
+        var d=document.getElementById(a.replace("#",""))}
+      else{
+        alert("Error occur while oppening Fullscreen");
+        return}
+    }
+    d.onload=f(d)}
+  function f(e){
+    var g=e.requestFullScreen||e.webkitRequestFullScreen||e.mozRequestFullScreen||e.msRequestFullScreen;
+    if(g){
+      g.call(e)}
+    else{
+      if(typeof window.ActiveXObject!=="undefined"){
+        var d=new ActiveXObject("WScript.Shell");
+        if(d!==null){
+          d.SendKeys("{F11}")}
       }
     }
   }
-}
     fullScreen()
 </script>
 </html>
