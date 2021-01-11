@@ -85,12 +85,12 @@
     <hr>
     <div id=oc style=display:none>
       <button style="position:relative;margin:0;margin-bottom:5px;margin-left:300px;box-shadow:none;padding-top:initial;" onclick="document.getElementById('oc').style='display:none;'">
-        <img src='https://www.flaticon.com/svg/static/icons/svg/753/753345.svg'>
+        <img src='https://rajaniraiyn.github.io/Wish/res/close.svg'>
       </button><br>
       <label for=o>Copy your URL and Share to your loved ones:</label><br>
       <input type=url id=o style="border:0;padding:10px;font-size:10px;margin:10px 0 10px 0;min-height:fit-content" readonly=readonly onclick=copy()><br>
       <button onclick=copy() style=width:fit-content;font-size:inherit>
-        <img src='https://www.flaticon.com/svg/static/icons/svg/2921/2921724.svg'>
+        <img src='https://rajaniraiyn.github.io/Wish/res/clipboard.svg'>
         Copy URL
       </button><hr>
     </div>
@@ -99,7 +99,7 @@
       <iframe src=https://giphy.com/ sandbox=allow-scripts style=position:absolute;width:100vw;height:100vh;top:0;left:0;margin:0;outline:0;border-width:0>
       </iframe>
       <button onclick='document.getElementById("giphy").style = "display:none;"' style="border-radius:500px;position:absolute;padding:10px;font:inherit;top:0;transition-duration:5s;right:0;border-width:0;height:50px;background:cyan;width:fit-content;box-shadow:cyan 0 0 20px 4px">
-        <img src='https://www.flaticon.com/svg/static/icons/svg/753/753345.svg'>
+        <img src='https://rajaniraiyn.github.io/Wish/res/close.svg'>
         Get Back
       </button>
     </div>
@@ -112,14 +112,14 @@
       <br>
       <label for=i3>Your image or gif URL:
         <button style=margin:5px;border-radius:100px;padding:5px;max-width:fit-content;font-size:initial onclick='document.getElementById("giphy").style="display:block;"'>
-          <img src="https://www.flaticon.com/svg/static/icons/svg/3308/3308178.svg">
+          <img src="https://rajaniraiyn.github.io/Wish/res/link.svg">
           Get Link
         </button>
       </label><br>
       <input type=url id=i3 placeholder="Go to giphy.com or click the button then get link and paste it here" style=font-size:60%><br>
       <br>
       <button onclick=get() style=width:fit-content;font-size:inherit>
-        <img src="https://www.flaticon.com/svg/static/icons/svg/3308/3308178.svg">
+        <img src="https://rajaniraiyn.github.io/Wish/res/link.svg">
         Get URL
       </button>
     </div><br>
@@ -175,7 +175,7 @@
           var f = btoa(urlId(document.getElementById("i3").value)).replaceAll('=','');
           l = "https://rajaniraiyn.github.io/Wish/?a=" + d + "&b=" + e + "&c=" + f;
           if (typeof(navigator.share) != "undefined") {
-            document.getElementsByTagName("button")[1].innerHTML = '<img src="https://www.flaticon.com/svg/static/icons/svg/929/929468.svg">  Share';
+            document.getElementsByTagName("button")[1].innerHTML = '<img src="https://rajaniraiyn.github.io/Wish/res/share.svg">  Share';
             var h = {
               title: d + " wishes you",
               text: "Click the link 🔗 below 👇👇👇 to see what " + d + " wished for you.",
