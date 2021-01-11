@@ -1,6 +1,9 @@
+![Wish logo](https://rajaniraiyn.github.io/Wish/res/logo.svg)
+
 # Wish with ❤
 
-- New way to wish your close ones with your favourite gifs and quotes. Wish all with ❤ by Rajaniraiyn.
+New way to wish your close ones with your favourite gifs and quotes. Wish all with ❤ by Rajaniraiyn.
+
 - [Click here](https://rajaniraiyn.github.io/Wish/?a=UmFqYW5pcmFpeW4&b=V2VsY29tZSB5b3UgYWxsIA&c=eFVQR0dETnNMdnFzQk9odVUw) for Demo.
 - [Click here](https://rajaniraiyn.github.io/Wish.Input/) for Generate new.
 
@@ -30,9 +33,12 @@
 
 ### Where is my Name?
 
-- If you're in Desktop you can see `{your name} Wishes You with ❤` as tab name.
--
+- If you're in Desktop (devices havig tab name in browsers) you can see `{your name} Wishes You with ❤` as tab name.
 
 ### Does it stores what I give?
 
-- **No**, it doesn't store anything but it simply change them into URL.
+- **No**, This doesn't store anything but it simply change them into URL.
+
+**Note :**
+
+I'm continually working *lonely* in this project. If you like this project join me to develope this together.
