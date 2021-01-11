@@ -32,57 +32,45 @@
     <meta name=og:locale content=en_IN>
     <noscript>Your browser does not support JavaScript! You need it to use our services.</noscript>
     <style>
-      body button {
-        box-shadow: #000 0 0 20px 4px;
+      body button{
+        box-shadow:#000 0 0 20px 4px
       }
-      button:focus {
-        background-color: #afacac;
-        color: #fff
+      button:focus,button:hover{
+        background-color:#afacac;
+        color:#fff
       }
-      #oc,
-      button,
-      input {
-        text-align: center
+      #oc,button,input{
+        text-align:center
       }
-      button,
-      input {
-        border-radius: 100px;
-        border-bottom: 0;
-        background: #fff;
-        font: inherit;
-        margin: 10px;
-        min-height: 30px;
-        border-width: 0;
-        width: 300px;
-        box-shadow: #0ff 1px 1px 20px 5px;
-        outline: 0;
-        font-family: Arial, Helvetica, Sans-Serif;
-        transition-duration: 1s;
-        font-size: x-large
+      button,input{
+        border-radius:100px;
+        border-bottom:0;
+        background:#fff;
+        font:inherit;
+        margin:10px;
+        min-height:30px;
+        border-width:0;
+        width:300px;
+        box-shadow:#0ff 1px 1px 20px 5px;
+        outline:0;
+        font-family:Arial,Helvetica,Sans-Serif;
+        transition-duration:1s;font-size:x-large
       }
-      input[placeholder] {
-        font-size: small
+      input[placeholder]{
+        font-size:small
       }
-      input:focus {
-        background: #0ff
+      input:focus,input:hover{
+        background:#0ff
       }
-      img {
-        width: 20px;
-        margin-bottom: -5px
+      img{
+        width:20px;
+        margin-bottom:-5px
       }
-      hr {
-        height: 5px;
-        background-color: #ff1493
+      hr{
+        height:5px;
+        background-color:#ff1493
       }
-    </style>
-    <script>
-      function wish() {
-        document.getElementById("giphy").style = "display:none;"
-      }
-      function giphy() {
-        document.getElementById("giphy").style = "display:block;"
-      }
-    </script>
+    </style>=
   </head>
   <body style=font-weight:600;font-family:Arial,Helvetica,sans-serif;text-align:center>
     <h1>
@@ -110,7 +98,7 @@
     <div id=giphy style=display:none>
       <iframe src=https://giphy.com/ sandbox=allow-scripts style=position:absolute;width:100vw;height:100vh;top:0;left:0;margin:0;outline:0;border-width:0>
       </iframe>
-      <button onclick=wish() style="border-radius:500px;position:absolute;padding:10px;font:inherit;top:0;transition-duration:5s;right:0;border-width:0;height:50px;background:cyan;width:fit-content;box-shadow:cyan 0 0 20px 4px">
+      <button onclick='document.getElementById("giphy").style = "display:none;"' style="border-radius:500px;position:absolute;padding:10px;font:inherit;top:0;transition-duration:5s;right:0;border-width:0;height:50px;background:cyan;width:fit-content;box-shadow:cyan 0 0 20px 4px">
         <img src='https://www.flaticon.com/svg/static/icons/svg/753/753345.svg'>
         Get Back
       </button>
@@ -123,7 +111,7 @@
       <input type=text id=i2 placeholder="This may be your greeting, message, wish,..."><br>
       <br>
       <label for=i3>Your image or gif URL:
-        <button style=margin:5px;border-radius:100px;padding:5px;max-width:fit-content;font-size:initial onclick=giphy()>
+        <button style=margin:5px;border-radius:100px;padding:5px;max-width:fit-content;font-size:initial onclick='document.getElementById("giphy").style="display:block;"'>
           <img src="https://www.flaticon.com/svg/static/icons/svg/3308/3308178.svg">
           Get Link
         </button>
@@ -191,11 +179,12 @@
             var h = {
               title: d + " wishes you",
               text: "Click the link 🔗 below 👇👇👇 to see what " + d + " wished for you.",
-              url: l
+              url: l,
             };
             document.getElementsByTagName("button")[1].onclick = navigator.share(h)
           }
           else {
+            //pass
           };
           document.getElementById("o").value = l;
           document.getElementById("oc").style = "display:block!important;"
