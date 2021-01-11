@@ -9,7 +9,7 @@ New way to wish your close ones with your favourite gifs and quotes. Wish all wi
 
 ## Usage
 
-- **Step-1 :** Go to _rajaniraiyn.github.io/Wish/Input/_.
+- **Step-1 :** Go to Rajaniraiyn.github.io/Wish/Input/.
 - **Step-2 :** If you prefer to type your name just do so _or_ else it is not required.
 - **Step-3 :** Type your Wish on the second box it may be your wish
   _or_ greeting _or_ message _or_ quote _or_ whatever you want to say to your close ones.
