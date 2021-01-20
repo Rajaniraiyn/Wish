@@ -146,13 +146,13 @@
                   a = a[3]
               }
             else {
-              if (d.includes("giphy")) {
-                alert("Please use another type of giphy URL. You can also use other types of url too but use approprite URLs only.")
-              }
-              else {
-                if (d.includes("giphy.webp")) {
+              if (d.includes("giphy.webp")) {
                   var a = d
                   }
+              else {
+                if (d.includes("giphy")) {
+                    alert("Please use another type of giphy URL. You can also use other types of url too but use approprite URLs only.")
+                }
                 else {
                   if (d.includes(".")) {
                     alert("Is " + d + " your URL? If it is correct then click ok.");
