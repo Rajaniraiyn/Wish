@@ -54,7 +54,7 @@
   <h1 style=text-align:center;color:white;font-weight:bold;background:#000000d1;border-radius:20px;padding:2%;max-width:fit-content;margin-left:auto;margin-right:auto id=b></h1>
   <img src=https://rajaniraiyn.github.io/Wish/res/icon.png style=width:100px;position:absolute;top:0;display:none;>
   <script>
-    if(c.includes("."||"/")){
+    if(c.includes(".") || c.includes("/")){
       document.body.style="background: url("+c+") no-repeat center center fixed;background-size:100vw 100vh"}
     else{
       document.body.style="background: url(https://i.giphy.com/media/"+c+"/giphy.webp) no-repeat center center fixed;background-size:100vw 100vh"}
@@ -67,18 +67,7 @@
   </div>
   </body>
   <script>
-  function fullScreen(a){
-    if(a==""||a=="0"||a==null){
-      var d=document.documentElement}
-    else{
-      if(a[0]=="#"){
-        var d=document.getElementById(a.replace("#",""))}
-      else{
-        alert("Error occur while oppening Fullscreen");
-        return}
-    }
-    d.onload=f(d)}
-  function f(e){
+  function fullScreen(e){
     var g=e.requestFullScreen||e.webkitRequestFullScreen||e.mozRequestFullScreen||e.msRequestFullScreen;
     if(g){
       g.call(e)}
@@ -90,6 +79,7 @@
       }
     }
   }
-    fullScreen()
+    var f = documment.querySelector('body');
+    f.addEventListener("click", fullScreen(d));
 </script>
 </html>
