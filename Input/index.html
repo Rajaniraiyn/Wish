@@ -178,7 +178,7 @@
           var f = btoa(urlId(document.getElementById("i3").value)).replaceAll('=','');
           l = "https://rajaniraiyn.github.io/Wish/?a=" + d + "&b=" + e + "&c=" + f;
           if (typeof(navigator.share) != "undefined") {
-            document.getElementsByTagName("button")[1].innerHTML = '<img src="https://rajaniraiyn.github.io/Wish/res/share.svg">  Share';
+            document.getElementsByTagName("button")[1].innerHTML = '<img src="https://rajaniraiyn.github.io/Wish/res/share.svg" class="no-spdr">  Share';
             let h = {
               title: atob(d) + " wishes you",
               text: "Click the link 🔗 below 👇👇👇 to see what " + atob(d) + " wished for you.",
